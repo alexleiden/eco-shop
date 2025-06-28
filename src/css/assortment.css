@@ -1,3 +1,5 @@
+/* ***---MOBILE---*** */
+
 .assortment {
   padding: 32px 0;
 }
@@ -18,6 +20,10 @@
   gap: 40px;
 }
 
+.ass-list-item {
+  width: 100%;
+}
+
 .thumb {
   border-radius: 32px;
   overflow: hidden;
@@ -35,6 +41,7 @@
 .ass-text-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -80,4 +87,30 @@
 .ass-btn:hover,
 .ass-btn:focus {
   opacity: 0.5;
+}
+
+/* ***---TABLET---*** */
+
+@media screen and (min-width: 768px) {
+  .assortment {
+    padding: 64px 0;
+  }
+  .ass-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .ass-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc((100% - 24px) / 2);
+  }
+  .ass-list-item-text {
+    align-items: center;
+    flex-direction: column;
+  }
+  .ass-btn {
+    min-width: 340px;
+  }
 }

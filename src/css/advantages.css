@@ -1,0 +1,128 @@
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.advanteges {
+  padding: 32px 0;
+  margin: 0 auto;
+  background-color: #ebf8ed;
+}
+
+.adv-subtitle {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #030a06;
+  margin-bottom: 12px;
+}
+
+.adv-title {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #030a06;
+  margin-bottom: 20px;
+}
+
+.adv-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #030a06;
+  margin-bottom: 48px;
+}
+
+.adv-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.adv-item h4 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: #030a06;
+}
+
+.adv-item p {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #030a06;
+}
+
+.adv-item img {
+  width: 100%;
+  border-radius: 32px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  .advanteges {
+    padding: 64px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .adv-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .adv-item h4 {
+    margin-top: 32px;
+  }
+
+  .adv-list .adv-item {
+    width: calc(50% - 12px);
+  }
+  .adv-list .adv-item:last-child {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+
+  .advanteges {
+    background-color: #ebf8ed;
+  }
+
+  .adv-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .adv-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .adv-item h4 {
+    margin-bottom: 24px;
+    max-width: 320px;
+  }
+  .adv-text {
+    max-width: 768px;
+  }
+  .adv-list .adv-item {
+    flex: 1;
+  }
+}

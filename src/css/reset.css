@@ -32,3 +32,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  box-sizing: border-box;
+  outline: none;
+  resize: none; /* для textarea, якщо не хочеш розтягування */
+}
+
+address {
+  font-style: normal;
+}

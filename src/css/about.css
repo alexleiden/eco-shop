@@ -89,3 +89,40 @@
     }
   }
 }
+
+/* -----------DESC TOP------------ */
+
+@media screen and (min-width: 1440px) {
+    .container {
+      max-width: 1440px;
+      padding: 0 64px;
+    }
+  
+    .about {
+      padding-top: 112px;
+      padding-bottom: 94px;
+      max-width: 1440px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("/img/about/about1dt.jpg");
+    }
+  
+    /* .text-up-title {
+    } */
+  
+    .ab-text-title {
+      max-width: 629px;
+      font-size: 56px;
+    }
+  
+    .ab-text-under-title {
+      max-width: 573px;
+      font-size: 18px;
+    }
+  
+    @media screen and (min-resolution: 2x) {
+      .about {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("/img/about/about2dt.jpg");
+      }
+    }
+  }

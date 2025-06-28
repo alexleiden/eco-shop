@@ -4,7 +4,7 @@
   padding-bottom: 8px;
 }
 
-.header-container {
+.container.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,14 +48,14 @@
   width: 32px;
   height: 32px;
   fill: #030a06;
-  transition: fill 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-btn:hover .icon-burger,
 .burger-btn:focus .icon-burger,
 .header-menu-btn-close:hover .header-menu-icon-close,
 .header-menu-btn-close:focus .header-menu-icon-close {
-  fill: #113916;
+  opacity: 0.5;
 }
 
 .header-menu {
@@ -83,7 +83,7 @@
   transform: translateY(0);
 }
 
-.header-menu-container {
+.container.header-menu-container {
   height: 100%;
   padding-right: 12px;
   padding-left: 20px;
@@ -99,7 +99,7 @@
 .header-menu-nav {
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-bottom: 32px;
+  margin-bottom: auto;
 }
 
 .header-menu-nav-list {
@@ -125,19 +125,21 @@
   font-size: 16px;
   line-height: 1.6;
   display: block;
-  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-nav-link:hover,
 .header-menu-nav-link:focus,
 .header-menu-address-link:hover,
 .header-menu-address-link:focus {
-  color: #113916;
+  opacity: 0.5;
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .container.header-container,
+  .container.header-menu-container {
     padding-right: 16px;
+    padding-left: 32px;
   }
 
   .icon-burger {
@@ -158,6 +160,11 @@
   .header {
     padding-top: 14px;
     padding-bottom: 14px;
+  }
+
+  .container.header-container {
+    padding-right: 64px;
+    padding-left: 64px;
   }
 
   .header-nav {
@@ -198,14 +205,14 @@
     font-size: 16px;
     line-height: 1.6;
     display: block;
-    transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-nav-link:hover,
   .header-nav-link:focus,
   .header-address-link:hover,
   .header-address-link:focus {
-    color: #113916;
+    opacity: 0.5;
   }
 
   .burger-btn,

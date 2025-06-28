@@ -73,7 +73,6 @@
   }
   .advanteges {
     padding: 64px 0;
-    background-color: rgba(0, 0, 0, 0.2);
   }
   .adv-list {
     flex-wrap: wrap;
@@ -106,6 +105,10 @@
   .adv-list {
     flex-wrap: nowrap;
     gap: 24px;
+  }
+
+  .adv-title {
+    font-size: 48px;
   }
 
   .adv-item {

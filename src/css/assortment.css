@@ -1,0 +1,83 @@
+.assortment {
+  padding: 32px 0;
+}
+
+.ass-title {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ass-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.thumb {
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.ass-list-item-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ass-text-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ass-sub-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #030a06;
+}
+
+.ass-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: #030a06;
+}
+
+.ass-text-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  color: #030a06;
+}
+
+.ass-btn {
+  border: 1px solid #030a06;
+  border-radius: 6px;
+  padding: 8px 20px;
+  min-width: 288px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #030a06;
+  background-color: transparent;
+  transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ass-btn:hover,
+.ass-btn:focus {
+  opacity: 0.5;
+}

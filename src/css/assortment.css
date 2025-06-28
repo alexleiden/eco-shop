@@ -96,8 +96,6 @@
     padding: 64px 0;
   }
   .ass-list {
-    display: flex;
-    flex-wrap: wrap;
     gap: 24px;
   }
   .ass-list-item {
@@ -112,5 +110,23 @@
   }
   .ass-btn {
     min-width: 340px;
+  }
+}
+
+/* ***---DESKTOP---*** */
+
+@media screen and (min-width: 1440px) {
+  .ass-title {
+    font-size: 48px;
+  }
+  .ass-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+  .ass-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .ass-btn {
+    min-width: 310px;
   }
 }

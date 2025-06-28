@@ -1,1 +1,118 @@
+.hero-section {
+  padding-bottom: 64px;
+}
+.hero-title {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
 
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #030a06;
+}
+.hero-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #030a06;
+}
+.hero-button {
+  height: 50px;
+  border: 1px solid #030a06;
+  border-radius: 6px;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-button:hover {
+  background: transparent;
+}
+.hero-button a {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #030a06;
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-button:hover a {
+  opacity: 0.5;
+}
+
+/* Styles for mobile only */
+@media only screen and (max-width: 768px) {
+  .hero-title {
+    margin-bottom: 20px;
+  }
+  .hero-text {
+    margin-bottom: 24px;
+  }
+  .hero-button {
+    margin-bottom: 24px;
+    width: 288px;
+  }
+  .hero-section img {
+    width: 288px;
+    height: 285px;
+  }
+  .hero-section {
+    padding-top: 64px;
+  }
+}
+
+/*  */
+@media (min-width: 320px) and (max-width: 1439px) {
+  .hero-title {
+    font-size: 40px;
+  }
+}
+
+/* Styles for tablet devices */
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 32px;
+  }
+  .hero-text-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-button {
+    max-width: 148px;
+  }
+}
+
+/* Styles for tablet devices only */
+@media (min-width: 768px) and (max-width: 1439px) {
+  .hero-section img {
+    width: 704px;
+    height: 267px;
+  }
+  .hero-text-container {
+    gap: 24px;
+  }
+  .hero-text-wrapper {
+    gap: 32px;
+  }
+}
+/* Styles for Desktop devices */
+
+@media only screen and (min-width: 1440px) {
+  .hero-text-container {
+    gap: 32px;
+  }
+  .hero-text-wrapper {
+    gap: 32px;
+  }
+  .hero-title {
+    max-width: 600px;
+    font-size: 56px;
+  }
+  .hero-section img {
+    width: 1312px;
+    height: 498px;
+  }
+}

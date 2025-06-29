@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script type="module" crossorigin src="/eco-shop/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/eco-shop/assets/index-Die_Qj5P.css">
+    <link rel="stylesheet" crossorigin href="/eco-shop/assets/index-dsboawL-.css">
   </head>
   <body>
     <header class="header">
@@ -849,51 +849,65 @@
       <section id="support" class="support">
   <div class="container">
     <div class="support__wrap">
-
       <div class="support__content">
         <h2 class="support__title">
           Залишились питання?<br>Зв'яжіться з нами!
         </h2>
         <p class="support__subtitle">Ми тут, щоб допомогти!</p>
-
         <form class="support__form" novalidate>
           <div class="support__field">
             <label class="support__label" for="name">Ім’я</label>
-            <input id="name" name="name" class="support__input"
-                   type="text" minlength="5" maxlength="64"
-                   placeholder="Іван" autocomplete="name" required />
-            <span class="support__error">Ім’я 5‒64 символів</span>
+            <input  id="name" name="name" class="support__input"
+                    type="text" minlength="5" maxlength="64"
+                    placeholder="Іван" required>
+            <span class="support__hint support__hint--valid">Дані прийнято!</span>
+            <span class="support__hint support__hint--invalid">Ім’я 5‒64 символів</span>
           </div>
-
           <div class="support__field">
             <label class="support__label" for="mail">Електронна пошта</label>
-            <input id="mail" name="email" class="support__input"
-                   type="email" autocomplete="email"
-                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                   placeholder="hello@ecotote.com" required />
-            <span class="support__error">Введіть коректний email</span>
+            <input  id="mail" name="email" class="support__input"
+                    type="email"
+                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                    placeholder="hello@ecotote.com" required>
+            <span class="support__hint support__hint--valid">Дані прийнято!</span>
+            <span class="support__hint support__hint--invalid">Невірний email</span>
           </div>
-
           <div class="support__field">
             <label class="support__label" for="msg">Повідомлення</label>
             <textarea id="msg" name="message" class="support__textarea"
                       maxlength="500" rows="6"
                       placeholder="Введіть своє повідомлення…"></textarea>
-            <span class="support__error">Макс. 500 символів</span>
+            <span class="support__hint support__hint--valid">Дані прийнято!</span>
+            <span class="support__hint support__hint--invalid">Макс. 500 символів</span>
           </div>
-
           <button class="support__btn" type="submit">Надіслати</button>
         </form>
       </div>
-
-      <img
-        class="support__photo"
-        src="/eco-shop/assets/support-mobile-1x-BUkUFWS7.jpg"
-        srcset="/eco-shop/assets/support-mobile-2x-V5fdg9tc.jpg 2x, /eco-shop/assets/support-tablet-1x-ackOzilN.jpg 768w, /eco-shop/assets/support-desktop-1x-Cx5bEgMo.jpg 1440w"
-        alt="Еко-торба з листям" />
+      <div class="support__image"></div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+Message Kaede:gem:
+
+
+
+
+
+
+
+
+
 
     </main>
 

@@ -1,0 +1,127 @@
+/* global box-sizing */
+*,*::before,*::after{box-sizing:border-box}
+
+/* ===== базовый фон/секции ===== */
+.support{
+  background:#ebf8ed;
+  padding:96px 32px;
+  font-family:inherit;
+}
+
+/* ===== grid-контейнер ===== */
+.support__wrap{
+  display:grid;
+  gap:32px;          /* отступ */
+}
+
+/* ===== content column ===== */
+.support__content{display:flex;flex-direction:column;gap:32px}
+
+.support__title{
+  margin:0 0 24px;
+  font:700 32px/1.2 inherit;                /* mobile */
+}
+.support__subtitle{margin:0 0 32px;font:400 18px/1.6 inherit}
+
+/* ===== форма ===== */
+.support__form{display:flex;flex-direction:column;gap:24px;width:100%;max-width:644px}
+.support__field{display:flex;flex-direction:column;gap:8px;font-size:14px}
+.support__label{font:400 16px/1.6 inherit}
+
+.support__input,
+.support__textarea{
+  width:100%;
+  padding:16px 24px;
+  font-size:16px;
+  border:1px solid #031a1224;
+  border-radius:10px;
+  background:#031a120d;
+}
+.support__textarea{height:180px;resize:none}
+.support__input::placeholder,
+.support__textarea::placeholder{color:#031a1299}
+.support__input:focus::placeholder,
+.support__textarea:focus::placeholder{opacity:0}
+
+/* errors */
+.support__error{display:none;font-size:14px;color:#d64040}
+.support__textarea+.support__error{font-size:16px}
+.support__input:invalid:not(:placeholder-shown),
+.support__textarea:invalid:not(:placeholder-shown){
+  border-color:#d64040;color:#d64040}
+.support__input:invalid:not(:placeholder-shown)+.support__error,
+.support__textarea:invalid:not(:placeholder-shown)+.support__error{
+  display:block}
+
+/* кнопка */
+.support__btn{
+  align-self:flex-start;
+  padding:16px 40px;
+  background:#000;          /* ← базовый чёрный */
+  color:#fff;
+  border:none;              /* без зелёной рамки */
+  border-radius:10px;
+  font:400 16px/1.6 inherit;
+  cursor:pointer;
+  transition:background .2s,color .2s,border .2s;
+}
+
+/* hover / focus: */
+.support__btn:is(:hover,:focus){
+  background:transparent;
+  color:#000;
+  border:1px solid #000;
+}
+
+/* ===== фон-картинка ===== */
+.support__image{
+  width:100%;
+  aspect-ratio:4/3;
+  border-radius:40px;
+  background-size:cover;
+  background-position:center;
+  background-image:image-set(
+    "../img/support/support-mobile-1x.jpg" 1x,
+    "../img/support/support-mobile-2x.jpg" 2x);
+}
+
+/* ==================== TABLET 768-1439 ==================== */
+@media (min-width:768px) and (max-width:1439px){
+  .support{padding:96px 32px}
+  .support__title{font-size:36px;text-align:center}
+  .support__wrap{gap:48px;grid-template-columns:1fr}
+  .support__image{
+    width:80%;margin:0 auto;
+    background-image:image-set(
+      "../img/support/support-tablet-1x.jpg" 1x,
+      "../img/support/support-tablet-2x.jpg" 2x);}
+  .support__btn{width:249px;align-self:center}
+}
+
+/* ==================== DESKTOP ≥1440 ==================== */
+@media (min-width:1440px){
+  .support{padding:96px}
+  .support__title{font-size:48px}
+  .support__wrap{
+    gap:48px;
+    grid-template-columns:45% 55%;
+  }
+  .support__image{
+    max-width:644px;height:767px;
+    background-image:image-set(
+      "../img/support/support-desktop-1x.jpg" 1x,
+      "../img/support/support-desktop-2x.jpg" 2x);}
+  .support__btn{width:198px;margin-bottom:0}
+}
+
+/* ========= mobile extra-narrow ≤375 px (сделал, чтобы ничего не вылезало за границы) ========= */
+@media (max-width:375px){
+  .support{padding-left:8px;padding-right:8px}
+  .support__wrap{gap:24px}
+  .support__btn{width:100%}
+}
+
+/* ========= mobile common ≤767 ========= */
+@media (max-width:767px){
+  .support{padding:64px 16px}
+  .support__image{height:260px;margin-top:24px;aspect-ratio:auto}

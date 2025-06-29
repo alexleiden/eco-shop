@@ -22,15 +22,15 @@
   padding: 12px 24px;
   background-color: #030a06;
   transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-button:hover {
-  opacity: 0.5;
-}
-.hero-button a {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
   color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+.hero-button:hover {
+  opacity: 0.5;
 }
 
 /* Styles for mobile only */

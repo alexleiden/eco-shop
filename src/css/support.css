@@ -108,34 +108,39 @@
   .support__wrap{gap:24px}
 }
 
-/* ------------- TABLET 768-1439 ------------- */
-@media (min-width:768px) and (max-width:1439px){
-  .support__title,
-  .support__subtitle{text-align:center}
-
-  .support__wrap{gap:48px;grid-template-columns:1fr;justify-items:stretch}
-  .support__form{max-width:none}
-  .support__image{
-    width:100%;
-    aspect-ratio:4/3;
-    background:url("/img/support/support-tablet-1x.jpg") center/cover no-repeat;
-  }
-  .support__btn{width:249px;align-self:center}
+/* ---------- mobile ---------- */
+.support__image{
+  width:100%;
+  border-radius:32px;         
+  aspect-ratio:3/4;
+  background:center/cover no-repeat;
+  background-color:#ebf8ed;
+  background-image:image-set(
+    url("/img/support/support-mobile-1x.jpg") 1x,
+    url("/img/support/support-mobile-2x.jpg") 2x);
+  margin:24px 0 0;
 }
 
-/* ------------- DESKTOP ≥1440 ------------- */
-@media (min-width:1440px){
-  .support__title{font-size:48px;text-align:left}
-  .support__subtitle{text-align:left}
-  .support__wrap{grid-template-columns:45% 55%;gap:48px}
-  .support__form{max-width:644px}
+/* ---------- tablet ---------- */
+@media (min-width:768px) and (max-width:1439px){
   .support__image{
-    max-width:644px;height:767px;
+    aspect-ratio:4/3;
+    border-radius:32px;        /* то же скругление */
+    background:url("/img/support/support-tablet-1x.jpg") center/cover no-repeat;
+  }
+}
+
+/* ---------- desktop ≥1440 ---------- */
+@media (min-width:1440px){
+  .support__image{
+    max-width:644px;
+    height:767px;
+    border-radius:32px;
     background-image:image-set(
       url("/img/support/support-desktop-1x.jpg") 1x,
       url("/img/support/support-desktop-2x.jpg") 2x);
-    background-size:105% auto;
+
+    background-size:110% auto;
     background-position:center;
   }
-  .support__btn{width:198px;align-self:flex-start}
 }

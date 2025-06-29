@@ -1,9 +1,23 @@
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #030a06;
   background-color: #ebf8ed;
 }
 
 button {
   cursor: pointer;
+}
+h2 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  h2 {
+    font-size: 48px;
+  }
 }

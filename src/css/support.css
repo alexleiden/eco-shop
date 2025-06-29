@@ -1,10 +1,29 @@
-/* ---------- grid оболочка ---------- */
+/* ---------- Support ---------- */
+.support{
+  padding:32px 0;                 /* mobile ≤ 767 */
+}
+
+/* tablet 768-1439 */
+@media (min-width:768px){
+  .support{
+    padding:64px 0;
+  }
+}
+
+/* desktop ≥1440 */
+@media (min-width:1440px){
+  .support{
+    padding:64px 0;
+  }
+}
+
+/* ---------- grid ---------- */
 .support__wrap{
   display:grid;
   gap:32px;
 }
 
-/* ---------- заголовки ---------- */
+/* ---------- текст ---------- */
 .support__title{
   margin:0 0 24px;
   font-weight:700;
@@ -12,38 +31,37 @@
   line-height:1.2;
   letter-spacing:.01em;
 }
-
 .support__subtitle{
   margin:0 0 32px;
   font-size:18px;
   line-height:1.6;
 }
 
-/* ---------- форма ---------- */
+/* ---------- формы ввода ---------- */
 .support__form{
   display:flex;
   flex-direction:column;
   gap:24px;
   width:100%;
 }
-
 .support__field{display:flex;flex-direction:column;gap:8px}
-.support__label {font-size:16px;line-height:1.6}
+.support__label{font-size:16px;line-height:1.6}
 
 .support__input,
 .support__textarea{
   width:100%;
   padding:16px 24px;
-  font-size:16px;line-height:1.6;
+  font-size:16px;
+  line-height:1.6;
   border:1px solid #031a1224;
   border-radius:10px;
   background:#031a120d;
 }
 .support__textarea{height:180px;resize:none}
 
+/* ошибки */
 .support__error{display:none;font-size:14px;line-height:1.6;color:#d64040}
 .support__textarea+.support__error{font-size:16px}
-
 .support__input:invalid:not(:placeholder-shown),
 .support__textarea:invalid:not(:placeholder-shown){
   border-color:#d64040;color:#d64040;
@@ -53,71 +71,71 @@
   display:block;
 }
 
-/* ---------- кнопка ---------- */
+/* ---------- btn ---------- */
 .support__btn{
   align-self:flex-start;
   width:100%;
   padding:16px 40px;
-  background:#000;color:#fff;
-  border:none;border-radius:10px;
-  font-size:16px;line-height:1.6;
-  cursor:pointer;transition:.2s;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  line-height:1.6;
+  cursor:pointer;
+  transition:.2s;
 }
 .support__btn:is(:hover,:focus){
-  background:transparent;color:#000;border:1px solid #000;
+  background:transparent;
+  color:#000;
+  border:1px solid #000;
 }
 
-/* ---------- фото ---------- */
-.support__photo{
-  display:block;
+/* ---------- photo ---------- */
+.support__image{
   width:100%;
-  max-width:360px;           /* mobile */
-  aspect-ratio:3/4;
-  object-fit:cover;
   border-radius:20px;
-  margin:24px auto 0;
+  aspect-ratio:3/4;                               /* mobile */
+  background:center/cover no-repeat;
+  background-image:image-set(
+    url("/img/support/support-mobile-1x.jpg") 1x,
+    url("/img/support/support-mobile-2x.jpg") 2x);
+  margin:24px 0 0;
 }
 
-/* ======== TABLET 768-1439 ========== */
-@media (min-width:768px){
+/* extra-narrow ≤375 */
+@media (max-width:375px){
+  .support__wrap{gap:24px}
+}
+
+/* ------------- TABLET 768-1439 ------------- */
+@media (min-width:768px) and (max-width:1439px){
   .support__title,
   .support__subtitle{text-align:center}
 
-  .support__wrap{
-    gap:48px;
-    max-width:704px;
-    margin-inline:auto;
-  }
-
-  .support__btn{width:249px;align-self:center}
-
-  .support__photo{
-    max-width:704px;
+  .support__wrap{gap:48px;grid-template-columns:1fr;justify-items:stretch}
+  .support__form{max-width:none}
+  .support__image{
+    width:100%;
     aspect-ratio:4/3;
+    background:url("/img/support/support-tablet-1x.jpg") center/cover no-repeat;
   }
+  .support__btn{width:249px;align-self:center}
 }
 
-/* ======== DESKTOP ≥1440 ========== */
+/* ------------- DESKTOP ≥1440 ------------- */
 @media (min-width:1440px){
   .support__title{font-size:48px;text-align:left}
-
-  .support__wrap{
-    grid-template-columns:45% 55%;
-    gap:48px;
-    max-width:none;
-  }
-
+  .support__subtitle{text-align:left}
+  .support__wrap{grid-template-columns:45% 55%;gap:48px}
   .support__form{max-width:644px}
-  .support__btn{width:198px;align-self:flex-start}
-
-  .support__photo{
-    max-width:644px;
-    height:767px;
-    aspect-ratio:auto;
+  .support__image{
+    max-width:644px;height:767px;
+    background-image:image-set(
+      url("/img/support/support-desktop-1x.jpg") 1x,
+      url("/img/support/support-desktop-2x.jpg") 2x);
+    background-size:105% auto;
+    background-position:center;
   }
-}
-
-/* ======== extra-narrow ≤375 ========= */
-@media (max-width:375px){
-  .support__wrap{gap:24px}
+  .support__btn{width:198px;align-self:flex-start}
 }

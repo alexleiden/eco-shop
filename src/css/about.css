@@ -100,11 +100,11 @@
     max-width: 629px;
     font-size: 56px;
   }
-a
-  .ab-text-under-title {
+
+  /* .ab-text-under-title {
     max-width: 573px;
     font-size: 18px;
-  }
+  } */
 
   @media screen and (min-resolution: 2x) {
     .about {

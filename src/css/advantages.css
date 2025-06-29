@@ -12,6 +12,9 @@
 .adv-title {
   margin-bottom: 20px;
 }
+.adv-title h4 {
+  margin-left: 0;
+}
 .adv-text {
   font-weight: 400;
   font-size: 16px;
@@ -83,3 +86,8 @@
     flex: 1;
   }
 }
+
+
+
+
+

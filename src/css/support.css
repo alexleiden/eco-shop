@@ -1,13 +1,14 @@
+/* ---------- grid ---------- */
 .support__wrap{
   display:grid;
-  gap:32px;
+  gap:32px;                 
 }
 
-/* ---------- typograf ---------- */
+/* ---------- text ---------- */
 .support__title{
   margin:0 0 24px;
   font-weight:700;
-  font-size:36px;
+  font-size:36px;            /* mobile & tablet */
   line-height:1.2;
   letter-spacing:.01em;
 }
@@ -18,7 +19,7 @@
   line-height:1.6;
 }
 
-/* ---------- инпуты ---------- */
+/* ---------- inputs ---------- */
 .support__form{
   display:flex;
   flex-direction:column;
@@ -40,10 +41,20 @@
 }
 .support__textarea{height:180px;resize:none}
 
-/* error text (JS или :invalid так и не понял) */
+/* errors */
 .support__error{display:none;font-size:14px;line-height:1.6;color:#d64040}
+.support__textarea+.support__error{font-size:16px}
 
-/* кнопка */
+.support__input:invalid:not(:placeholder-shown),
+.support__textarea:invalid:not(:placeholder-shown){
+  border-color:#d64040;color:#d64040;
+}
+.support__input:invalid:not(:placeholder-shown)+.support__error,
+.support__textarea:invalid:not(:placeholder-shown)+.support__error{
+  display:block;
+}
+
+/* ---------- btn ---------- */
 .support__btn{
   align-self:flex-start;
   width:100%;
@@ -55,7 +66,7 @@
   font-size:16px;
   line-height:1.6;
   cursor:pointer;
-  transition:.2s;
+  transition:background .2s,color .2s,border .2s;
 }
 .support__btn:is(:hover,:focus){
   background:transparent;
@@ -63,51 +74,77 @@
   border:1px solid #000;
 }
 
-/* ---------- ФОТО  (как <img>) ---------- */
-.support__photo{
-  display:block;
+/* ---------- photo ---------- */
+.support__image{
   width:100%;
-  max-width:360px;       /* mobile */
-  aspect-ratio:3/4;
   border-radius:20px;
-  object-fit:cover;
-  margin:24px auto 0;
+  aspect-ratio:3/4;                                
+  background:center/cover no-repeat;
+  background-image:image-set(
+    url("/img/support/support-mobile-1x.jpg") 1x,
+    url("/img/support/support-mobile-2x.jpg") 2x);
+  margin:24px 0 0;
 }
 
-/* ================= TABLET 768-1439 ================= */
-@media (min-width:768px){
+/* ================= mobile extra-narrow ≤375 ================= */
+@media (max-width:375px){
+  .support__wrap{gap:24px}
+}
+
+/* ================= tablet 768-1439 ================= */
+@media (min-width:768px) and (max-width:1439px){
   .support__title,
   .support__subtitle{text-align:center}
 
   .support__wrap{
     gap:48px;
-    max-width:704px;
-    margin-inline:auto;
+    grid-template-columns:1fr;      
+    justify-items:stretch;
+  }
+
+  .support__form{max-width:none}     
+
+  .support__image{
+    width:100%;
+    aspect-ratio:4/3;
+    background-image:url("/img/support/support-tablet-1x.jpg");
+    background-size:cover;
+    background-position:center;
   }
 
   .support__btn{width:249px;align-self:center}
-  .support__photo{
-    max-width:704px;
-    aspect-ratio:4/3;
-  }
 }
 
-/* ================= DESKTOP ≥1440 ================= */
+/* ================= desktop ≥1440 ================= */
 @media (min-width:1440px){
-  .support__title{font-size:48px;text-align:left}
+  .support__title{
+    font-size:48px;
+    text-align:left;
+  }
 
   .support__wrap{
     grid-template-columns:45% 55%;
     gap:48px;
-    max-width:none;
   }
 
-  .support__form{max-width:644px}
-  .support__btn{width:198px;align-self:flex-start}
-
-  .support__photo{
+  .support__form{
     max-width:644px;
-    height:767px;        
+  }
+
+  .support__image{
+    max-width:644px;
+    height:767px;             
     aspect-ratio:auto;
+    border-radius:20px;       
+    background-image:image-set(
+      url("/img/support/support-desktop-1x.jpg") 1x,
+      url("/img/support/support-desktop-2x.jpg") 2x);
+    background-size:105% auto;
+    background-position:center;
+  }
+
+  .support__btn{
+    width:198px;
+    align-self:flex-start;
   }
 }

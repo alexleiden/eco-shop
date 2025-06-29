@@ -67,11 +67,7 @@
 
 @media screen and (min-width: 1440px) {
   .gallery-list {
-    display: grid;
-    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(421px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    gap: 24px;
   }
   .gallery-title {
     font-size: 48px;
@@ -80,12 +76,6 @@
   .gal-img-bag {
     grid-column-start: 1;
     grid-row-start: 2;
-  }
-
-  .gal-img-guy {
-    grid-row: span 2 / span 2;
-    grid-column-start: 2;
-    grid-row-start: 1;
   }
 
   .gal-img-lady-garden {

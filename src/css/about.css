@@ -63,16 +63,16 @@
       url('/img/about/about1tb.jpg');
   }
 
-  .text-up-title {
+  .ab-text-up-title {
     margin-bottom: 16px;
   }
 
-  .text-title {
+  .ab-text-title {
     max-width: 629px;
     margin-bottom: 24px;
   }
 
-  .text-under-title {
+  .ab-text-under-title {
     max-width: 573px;
     font-size: 18px;
   }

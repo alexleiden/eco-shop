@@ -1,0 +1,176 @@
+/* ───────── Google fonts ───────── */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fira+Sans:wght@400&display=swap");
+
+*,*::before,*::after{box-sizing:border-box}
+
+/* ---------- SECTION ---------- */
+.support{
+  background:#ebf8ed;
+  padding:64px 16px;               /* мобильный базовый */
+  font-family:"Fira Sans",sans-serif;
+}
+
+/* ---------- GRID ---------- */
+.support__wrap{
+  display:grid;
+  gap:32px;
+  margin-inline:auto;
+  max-width:1240px;                /* только на десктопе */
+}
+
+/* ---------- CONTENT ---------- */
+.support__content{display:flex;flex-direction:column;gap:32px}
+.support__title{
+  margin:0 0 24px;
+  font:700 36px/1.2 "Comfortaa",sans-serif;
+  letter-spacing:.01em;
+  color:#030a06;
+}
+.support__subtitle{
+  margin:0 0 32px;
+  font:400 18px/1.6 "Fira Sans",sans-serif;
+}
+
+/* ---------- FORM ---------- */
+.support__form{
+  display:flex;flex-direction:column;gap:24px;
+  width:100%;max-width:644px;
+}
+.support__field{display:flex;flex-direction:column;gap:8px}
+.support__label{font:400 16px/1.6 "Fira Sans",sans-serif}
+
+.support__input,
+.support__textarea{
+  width:100%;padding:16px 24px;
+  font:400 16px/1.6 "Fira Sans",sans-serif;
+  border:1px solid #031a1224;
+  border-radius:10px;
+  background:#031a120d;
+}
+.support__textarea{height:180px;resize:none}
+.support__input::placeholder,
+.support__textarea::placeholder{color:#031a1299}
+
+/* errors */
+.support__error{display:none;font:400 14px/1.6 "Fira Sans";color:#d64040}
+.support__textarea+.support__error{font-size:16px}
+.support__input:invalid:not(:placeholder-shown),
+.support__textarea:invalid:not(:placeholder-shown){border-color:#d64040;color:#d64040}
+.support__input:invalid:not(:placeholder-shown)+.support__error,
+.support__textarea:invalid:not(:placeholder-shown)+.support__error{display:block}
+
+/* button */
+.support__btn{
+  align-self:flex-start;
+  width:100%;
+  padding:16px 40px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font:400 16px/1.6 "Fira Sans";
+  cursor:pointer;
+  transition:.2s;
+}
+.support__btn:is(:hover,:focus){background:transparent;color:#000;border:1px solid #000}
+
+/* ---------- IMAGE (desktop default) ---------- */
+.support__image{
+  width:100%;
+  border-radius:20px;
+  background:center/cover no-repeat;
+  aspect-ratio:4/3;
+  background-image: image-set(
+  url("../img/support/support-mobile-1x.jpg") 1x,
+  url("../img/support/support-mobile-2x.jpg") 2x);
+}
+
+/* =========== MOBILE  (≤ 767 px) =========== */
+@media (max-width:767px){
+
+  .support__image{
+    width:100%;
+    max-width:none;         
+
+    aspect-ratio:3/4;
+    height:auto;
+
+    background-size:cover;   
+    background-position:center;
+    background-repeat:no-repeat;
+
+    border-radius:20px;      
+    margin:24px 0 0;         
+  }
+}
+
+/* ================= TABLET 768-1439 ================= */
+@media (min-width:768px) and (max-width:1439px){
+  .support{padding:96px 32px}
+  .support__title{text-align:center}
+  .support__subtitle{
+    text-align:center;      
+    margin-left:auto;       
+    margin-right:auto;
+  }
+  .support__wrap{
+    gap:48px;
+    grid-template-columns:1fr;
+    justify-items:stretch;
+  }
+  .support__form{width:100%;max-width:none}
+  .support__image{
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    background-image: url("../img/support/support-tablet-1x.jpg");
+    background-size:cover;
+    background-position:center;
+    border-radius:20px;
+  }
+  .support__btn{width:249px;align-self:center}
+}
+
+/* ================= DESKTOP ≥ 1440 ================= */
+@media (min-width:1440px){
+  .support{
+    padding:96px;
+  }
+
+  .support__title{
+    font-size:48px;
+    text-align:left;
+  }
+
+  .support__wrap{
+    grid-template-columns:45% 55%;
+    gap:48px;
+  }
+
+  .support__form{
+    max-width:644px;
+  }
+
+  .support__image{
+    max-width:644px;
+    height:767px;
+
+    background-image:image-set(
+    url("../img/support/support-desktop-1x.jpg") 1x,
+    url("../img/support/support-desktop-2x.jpg") 2x);
+
+    background-size:105% auto;
+    background-position:center;
+  }
+
+  .support__btn{
+    width:198px;
+    align-self:flex-start;
+  }
+}
+
+/* ========== extra-narrow ≤ 375 ========== */
+@media (max-width:375px){
+  .support{padding-left:8px;padding-right:8px}
+  .support__wrap{gap:24px}
+}

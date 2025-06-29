@@ -1,0 +1,113 @@
+.support__wrap{
+  display:grid;
+  gap:32px;
+}
+
+/* ---------- typograf ---------- */
+.support__title{
+  margin:0 0 24px;
+  font-weight:700;
+  font-size:36px;
+  line-height:1.2;
+  letter-spacing:.01em;
+}
+
+.support__subtitle{
+  margin:0 0 32px;
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* ---------- инпуты ---------- */
+.support__form{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  width:100%;
+}
+.support__field{display:flex;flex-direction:column;gap:8px}
+.support__label{font-size:16px;line-height:1.6}
+
+.support__input,
+.support__textarea{
+  width:100%;
+  padding:16px 24px;
+  font-size:16px;
+  line-height:1.6;
+  border:1px solid #031a1224;
+  border-radius:10px;
+  background:#031a120d;
+}
+.support__textarea{height:180px;resize:none}
+
+/* error text (JS или :invalid так и не понял) */
+.support__error{display:none;font-size:14px;line-height:1.6;color:#d64040}
+
+/* кнопка */
+.support__btn{
+  align-self:flex-start;
+  width:100%;
+  padding:16px 40px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  line-height:1.6;
+  cursor:pointer;
+  transition:.2s;
+}
+.support__btn:is(:hover,:focus){
+  background:transparent;
+  color:#000;
+  border:1px solid #000;
+}
+
+/* ---------- ФОТО  (как <img>) ---------- */
+.support__photo{
+  display:block;
+  width:100%;
+  max-width:360px;       /* mobile */
+  aspect-ratio:3/4;
+  border-radius:20px;
+  object-fit:cover;
+  margin:24px auto 0;
+}
+
+/* ================= TABLET 768-1439 ================= */
+@media (min-width:768px){
+  .support__title,
+  .support__subtitle{text-align:center}
+
+  .support__wrap{
+    gap:48px;
+    max-width:704px;
+    margin-inline:auto;
+  }
+
+  .support__btn{width:249px;align-self:center}
+  .support__photo{
+    max-width:704px;
+    aspect-ratio:4/3;
+  }
+}
+
+/* ================= DESKTOP ≥1440 ================= */
+@media (min-width:1440px){
+  .support__title{font-size:48px;text-align:left}
+
+  .support__wrap{
+    grid-template-columns:45% 55%;
+    gap:48px;
+    max-width:none;
+  }
+
+  .support__form{max-width:644px}
+  .support__btn{width:198px;align-self:flex-start}
+
+  .support__photo{
+    max-width:644px;
+    height:767px;        
+    aspect-ratio:auto;
+  }
+}

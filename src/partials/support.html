@@ -1,0 +1,42 @@
+<section id="support" class="support">
+  <div class="support__wrap">
+    <!-- контент -->
+    <div class="support__content">
+      <h2 class="support__title">Залишились питання?<br>Зв'яжіться з нами!</h2>
+      <p  class="support__subtitle">Ми тут, щоб допомогти!</p>
+
+      <form class="support__form" novalidate>
+        <div class="support__field">
+          <label class="support__label" for="name">Ім’я</label>
+          <input id="name" name="name" class="support__input"
+                 type="text" minlength="5" maxlength="64"
+                 placeholder="Іван" autocomplete="name" required>
+          <span class="support__error">Ім’я 5‒64 символи</span>
+        </div>
+
+        <div class="support__field">
+          <label class="support__label" for="mail">Електронна пошта</label>
+          <input id="mail" name="email" class="support__input"
+                 type="email" placeholder="hello@ecotote.com"
+                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                 autocomplete="email" required>
+          <span class="support__error">Введіть коректний email</span>
+        </div>
+
+        <div class="support__field">
+          <label class="support__label" for="msg">Повідомлення</label>
+          <textarea id="msg" name="message" class="support__textarea"
+                    placeholder="Введіть своє повідомлення…" rows="6"
+                    maxlength="500"></textarea>
+          <span class="support__error">Макс. 500 символів</span>
+        </div>
+
+        <button class="support__btn" type="submit">Надіслати</button>
+      </form>
+    </div>
+
+    <!-- фон-картинка -->
+    <div class="support__image" role="img"
+         aria-label="Еко-сумка з листям"></div>
+  </div>
+</section>

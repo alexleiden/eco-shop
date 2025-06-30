@@ -5,6 +5,7 @@
 }
 
 .ass-title {
+  text-align: center;
   margin-bottom: 32px;
 }
 
@@ -16,6 +17,9 @@
 
 .ass-list-item {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .thumb {
@@ -27,6 +31,7 @@
 .ass-list-item-text {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 8px;
   margin-bottom: 16px;
@@ -37,6 +42,7 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 0;
 }
 
 .ass-sub-title {
@@ -93,9 +99,6 @@
     gap: 24px;
   }
   .ass-list-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: calc((100% - 24px) / 2);
   }
   .ass-list-item-text {

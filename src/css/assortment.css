@@ -17,6 +17,7 @@
 
 .ass-list-item {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,17 +33,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
   margin-bottom: 16px;
-}
-
-.ass-text-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 0;
 }
 
 .ass-sub-title {
@@ -50,7 +43,6 @@
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
-  color: #030a06;
 }
 
 .ass-text {
@@ -58,7 +50,6 @@
   font-size: 14px;
   line-height: 1.6;
   text-align: center;
-  color: #030a06;
 }
 
 .ass-text-price {
@@ -66,7 +57,6 @@
   font-size: 20px;
   line-height: 1.6;
   text-align: center;
-  color: #030a06;
 }
 
 .ass-btn {
@@ -100,10 +90,6 @@
   }
   .ass-list-item {
     width: calc((100% - 24px) / 2);
-  }
-  .ass-list-item-text {
-    align-items: center;
-    flex-direction: column;
   }
   .ass-btn {
     min-width: 340px;

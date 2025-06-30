@@ -32,6 +32,10 @@
 .hero-button:hover {
   opacity: 0.5;
 }
+.hero-section img {
+  border-radius: 40px;
+  border: none;
+}
 
 /* Styles for mobile only */
 @media only screen and (max-width: 768px) {

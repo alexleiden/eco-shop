@@ -11,7 +11,7 @@
 .support__label{font:400 16px/1.6 "Fira Sans";}
 .support__input,
 .support__textarea{
-  width:100%;padding:16px 24px;
+  width:100%;padding:8px 12px;
   font:400 16px/1.6 "Fira Sans";
   border:1px solid #031a1224;border-radius:10px;background:#031a120d;
 }

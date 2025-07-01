@@ -21,13 +21,13 @@
 .support__textarea{
   width:100%;
   font:400 16px/1.6 "Fira Sans";
-  border:1px solid #031a1224;border-radius:10px;background:#031a120d;
+  border:1px solid #031a1224;border-radius:6px;background:#031a120d;
 }
 
 /* фиксированная высота поля ввода */
 .support__input{
   height:26px;             
-  padding:4px 12px;         
+  padding:8px 12px;         
   box-sizing:border-box;    
 }
 

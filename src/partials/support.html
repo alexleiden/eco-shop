@@ -2,7 +2,7 @@
   <div class="container supp-container">
     <div class="support-form-container">
       <h2 id="support" class="support-title">Залишились питання?<br> Зв'яжіться з нами!</h2>
-      <h3 class="support-subtitle">Ми тут, щоб допомогти!</h3>
+      <p class="support-subtitle">Ми тут, щоб допомогти!</h3>
       <form class="support-form">
         <div class="support-field">
           <label for="name" class="support-label">Ім'я</label>
@@ -16,7 +16,7 @@
             minlength="5"
             maxlength="64"
           />
-          <p class="text-invalid">Error text</p>
+          <p class="text-invalid">Ім’я 5‒64 символи</p>
         </div>
         <div class="support-field">
           <label for="email" class="support-label">Електронна пошта</label>
@@ -29,7 +29,7 @@
             required
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           />
-          <p class="text-invalid">Error text</p>
+          <p class="text-invalid">Введіть коректний email</p>
         </div>
         <div class="support-field">
           <label for="message" class="support-label">Повідомлення</label>
@@ -40,7 +40,7 @@
             placeholder="Введіть своє повідомлення..."
             maxlength="500"
           ></textarea>
-          <p class="text-invalid">Error text</p>
+          <p class="text-invalid">Макс. 500 символів</p>
         </div>
         <button type="submit" class="support-btn">Надіслати</button>
       </form>

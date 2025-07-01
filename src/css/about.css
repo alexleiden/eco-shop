@@ -14,7 +14,6 @@
 }
 
 .ab-text-up-title {
-  font-family: 'Comfortaa', sans-serif;
   max-width: 95px;
   margin: 0 auto;
   margin-bottom: 12px;
@@ -26,6 +25,7 @@
 }
 
 .ab-text-title {
+  font-family: 'Comfortaa', sans-serif;
   max-width: 288px;
   margin: 0 auto;
   margin-bottom: 20px;

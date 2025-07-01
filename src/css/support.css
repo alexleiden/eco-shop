@@ -59,8 +59,9 @@
 
 /* ── button ── */
 .support__btn{
-  align-self:flex-start;width:100%;padding:16px 40px;
-  background:#000;color:#fff;border:none;border-radius:10px;
+  align-self:flex-start;width:100%;border-radius: 6px;
+padding: 12px 24px;
+  background:#000;color:#fff;border:none;
   font:400 16px/1.6 "Fira Sans";cursor:pointer;transition:.2s;
 }
 .support__btn:is(:hover,:focus){
@@ -71,7 +72,7 @@
 .support__image{
   width:100%;border-radius:32px;aspect-ratio:3/4;
   background:center/cover no-repeat;
-  margin:24px 0 0;                            
+  margin:0 0 0;                            
   background-image:image-set(
     url("/img/support/support-mobile-1x.jpg") 1x,
     url("/img/support/support-mobile-2x.jpg") 2x);
@@ -96,7 +97,7 @@
     aspect-ratio:4/3;
     background:url("/img/support/support-tablet-1x.jpg") center/cover no-repeat;
   }
-  .support__btn{width:249px;align-self:center;}
+  .support__btn{width:249px;align-self:start;border-radius: 6px;padding: 12px 24px;height: 50px;}
 }
 
 /* ---------- DESKTOP ≥ 1440 ---------- */

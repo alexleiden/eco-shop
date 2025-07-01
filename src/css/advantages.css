@@ -12,7 +12,7 @@
 .adv-title {
   margin-bottom: 20px;
 }
-.adv-title h4 {
+.adv-title h3 {
   margin-left: 0;
 }
 .adv-text {
@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   gap: 48px;
 }
-.adv-item h4 {
+.adv-item h3 {
   font-size: 24px;
   font-family: 'Comfortaa', sans-serif;
   margin-bottom: 4px;
@@ -52,9 +52,6 @@
     flex-direction: row;
     gap: 24px;
   }
-  .adv-item h4 {
-    margin-top: 32px;
-  }
   .adv-list .adv-item {
     width: calc(50% - 12px);
   }
@@ -75,7 +72,7 @@
     justify-content: flex-start;
     flex-direction: column;
   }
-  .adv-item h4 {
+  .adv-item h3 {
     margin-bottom: 24px;
     max-width: 320px;
   }
@@ -86,6 +83,13 @@
     flex: 1;
   }
 }
+
+
+
+
+
+
+
 
 
 

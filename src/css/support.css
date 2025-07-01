@@ -13,8 +13,7 @@
     border-radius: 40px;
 }
 
-
-@media screen and (min-resolution: 2x) {
+@media screen and (min-resolution: 2dppx) and (max-width: 767px) {
     .background-image {
         background-image: url(/img/support/support-mobile-2x.jpg);
     }
@@ -36,6 +35,11 @@
     margin-bottom: 32px;
 }
 
+.support-form-container {
+    /* отступ теперь тут */
+    margin-bottom: 24px;
+}
+
 .support-field {
     margin-bottom: 24px;
 }
@@ -54,7 +58,6 @@
     padding: 8px 12px;
     background-color: rgba(3, 10, 6, 0.05);
     outline: transparent;
-
     line-height: 1.6;
 }
 
@@ -71,39 +74,18 @@
     display: none;
 }
 
-.text-invalid {
-    color: #d64040;
-}
+.text-invalid  { color: #d64040; }
+.text-valid    { color: #75D281; }
 
-.text-valid {
-    color: #75D281;
-}
-
-.support-item:not(:placeholder-shown):invalid {
-    border-color: #d64040;
-}
-
-.support-item:not(:placeholder-shown):valid {
-    border-color: #75D281;
-}
-
-.support-item:not(:placeholder-shown):invalid~.text-invalid {
-    display: block;
-}
-
-.support-item:not(:placeholder-shown):invalid~.text-valid {
-    display: block;
-}
+.support-item:not(:placeholder-shown):invalid        { border-color: #d64040; }
+.support-item:not(:placeholder-shown):valid          { border-color: #75D281; }
+.support-item:not(:placeholder-shown):invalid ~ .text-invalid { display: block; }
+.support-item:not(:placeholder-shown):invalid ~ .text-valid   { display: block; }
 
 .support-item:hover::placeholder,
-.support-item:focus::placeholder {
-    opacity: 0;
-}
+.support-item:focus::placeholder { opacity: 0; }
 
-.support-textarea {
-    height: 180px;
-    resize: none;
-}
+.support-textarea { height: 180px; resize: none; }
 
 .support-btn {
     border: 1px solid #030a06;
@@ -113,14 +95,13 @@
     padding: 12px 106px;
     text-align: center;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 24px;
-
+    margin: 0 auto;          /* без отступа */
     line-height: 1.6;
     color: #fff;
     background-color: #030a06;
     opacity: 1;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity          250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .support-btn:hover,
@@ -129,46 +110,38 @@
     opacity: 0.5;
 }
 
-
-
-
+/* ---------- TABLET ≥768px ---------- */
 @media screen and (min-width: 768px) {
-    .support {
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
+
+    .support { padding-top: 64px; padding-bottom: 64px; }
 
     .background-image {
         background-image: url(/img/support/support-tablet-1x.jpg);
         width: 704px;
     }
 
-    @media screen and (min-resolution: 2x) {
-        .background-image {
-            background-image: url(/img/support/support-tablet-2x.jpg);
-        }
+    @media screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1439px) {
+        .background-image { background-image: url(/img/support/support-tablet-2x.jpg); }
     }
 
-    .support-title {
-        max-width: 468px;
-    }
+    .support-title { max-width: 468px; }
+    .support-item  { width: 704px; }
 
-    .support-item {
-        width: 704px;
-    }
+    .support-form-container { margin-bottom: 24px; } 
 
     .support-btn {
-        margin: 0;
-        margin-bottom: 24px;
+        margin: 0;              /* без отступа */
         padding: 12px 86px;
         min-width: 249px;
     }
 }
 
+/* ---------- DESKTOP ≥1440px ---------- */
 @media screen and (min-width: 1440px) {
+
     .container.supp-container {
         display: flex;
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
         gap: 24px;
     }
 
@@ -178,23 +151,18 @@
         height: 767px;
     }
 
-    @media screen and (min-resolution: 2x) {
-        .background-image {
-            background-image: url(/img/support/support-desktop-2x.jpg);
-        }
+    /* desktop */
+    @media screen and (min-resolution: 2dppx) and (min-width: 1440px) {
+        .background-image { background-image: url(/img/support/support-desktop-2x.jpg); }
     }
 
-    .support-title {
-        font-size: 48px;
-        max-width: 644px;
-    }
+    .support-title { font-size: 48px; max-width: 644px; }
+    .support-item  { width: 644px; }
 
-    .support-item {
-        width: 644px;
-    }
+    .support-form-container { margin-bottom: 0; }
 
     .support-btn {
-        margin: 0;
+        margin: 0;              /* без отступа */
         padding: 12px 61px;
         min-width: 198px;
     }

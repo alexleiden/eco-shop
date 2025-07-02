@@ -2,7 +2,9 @@
     padding-top: 32px;
     padding-bottom: 32px;
 }
-
+.support-form-container {
+    margin-bottom: 24px;
+}
 .background-image {
     background-image: url(/img/support/support-mobile-1x.jpg);
     background-size: cover;
@@ -175,7 +177,9 @@
         flex-wrap: wrap ;
         gap: 24px;
     }
-
+    .support-form-container {
+        margin-bottom: none;
+    } 
     .background-image {
         background-image: url(/img/support/support-desktop-1x.jpg);
         width: 644px;

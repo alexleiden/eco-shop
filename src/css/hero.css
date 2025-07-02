@@ -40,7 +40,7 @@
 /* Styles for mobile only */
 @media only screen and (max-width: 768px) {
   .hero-text-container {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .hero-title {
     margin-bottom: 20px;

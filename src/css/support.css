@@ -43,7 +43,7 @@
 .support-label {
     line-height: 1.6;
     display: block;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .support-item {
@@ -114,7 +114,6 @@
     text-align: center;
     display: block;
     margin: 0 auto;
-    margin-bottom: 24px;
 
     line-height: 1.6;
     color: #fff;
@@ -138,6 +137,11 @@
         padding-bottom: 64px;
     }
 
+    .container.supp-container {
+        margin-bottom: 24px;
+    
+    }
+
     .background-image {
         background-image: url(/img/support/support-tablet-1x.jpg);
         width: 704px;
@@ -159,7 +163,7 @@
 
     .support-btn {
         margin: 0;
-        margin-bottom: 24px;
+
         padding: 12px 86px;
         min-width: 249px;
     }
